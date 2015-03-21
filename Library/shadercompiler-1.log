@@ -1,0 +1,228 @@
+Base path: C:/Program Files (x86)/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-1-1108
+Cmd: getPlatforms
+Cmd: preprocess
+  insize=13469 outsize=1241 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5045 outsize=3167 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5045 outsize=2452 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3125 outsize=3378 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3125 outsize=2753 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5008 outsize=3443 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (346): 'surf': output parameter 'o' not completely initialized
+  error: 1 plat 4 at UnityCGGoLin.cginc(153): implicit truncation of vector type
+  api=4 type=1 insize=5008 outsize=0 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=0
+Cmd: preprocess
+  insize=17670 outsize=1819 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6236 outsize=8237 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6236 outsize=3874 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4194 outsize=7815 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4194 outsize=4199 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3332 outsize=4825 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3332 outsize=868 kw=SHADOWS_DEPTH ok=1
+Cmd: preprocess
+  insize=26504 outsize=1971 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6313 outsize=6799 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6313 outsize=3127 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4041 outsize=6377 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4041 outsize=3411 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3892 outsize=5507 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3892 outsize=1591 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6081 outsize=5548 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6081 outsize=1924 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3033 outsize=3744 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3033 outsize=437 kw=SHADOWS_DEPTH ok=1
+Cmd: preprocess
+  insize=23054 outsize=4241 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6349 outsize=4662 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6349 outsize=4752 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3956 outsize=4256 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3956 outsize=5109 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3874 outsize=3549 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3874 outsize=2793 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5892 outsize=3443 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5892 outsize=2761 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: preprocess
+  insize=12514 outsize=1708 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4117 outsize=2826 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4117 outsize=1477 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=2232 outsize=3037 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=2232 outsize=1778 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1600 outsize=1477 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1600 outsize=689 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4115 outsize=3102 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (357): 'surf': output parameter 'o' not completely initialized
+  error: 1 plat 4 at UnityCGGoLin.cginc(153): implicit truncation of vector type
+  api=4 type=1 insize=4115 outsize=0 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=0
+Cmd: preprocess
+  insize=4041 outsize=2797 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1019 outsize=2265 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1019 outsize=900 kw= ok=1
+Cmd: preprocess
+  insize=9485 outsize=3016 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3680 outsize=4134 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3680 outsize=1152 kw= ok=1
+Cmd: preprocess
+  insize=111437 outsize=101545 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6289 outsize=8237 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6289 outsize=3858 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4247 outsize=7815 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4247 outsize=4183 kw=POINT ok=1
+Cmd: preprocess
+  insize=10832 outsize=3991 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3585 outsize=4321 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3585 outsize=949 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=844 outsize=2022 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=844 outsize=437 kw=SHADOWS_DEPTH ok=1
+Cmd: preprocess
+  insize=17221 outsize=2584 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4295 outsize=5239 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4295 outsize=1664 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=2410 outsize=5450 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=2410 outsize=1948 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=2022 outsize=4272 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=2022 outsize=1233 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4293 outsize=5572 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (400): 'surf': output parameter 'o' not completely initialized
+  error: 1 plat 4 at TerrainEngineGoLin.cginc(176): 'dot': implicit truncation of vector type
+  error: 1 plat 4 at TerrainEngineGoLin.cginc(277): implicit truncation of vector type
+  error: 1 plat 4 at TerrainEngineGoLin.cginc(280): implicit truncation of vector type
+  error: 1 plat 4 at UnityCGGoLin.cginc(153): implicit truncation of vector type
+  api=4 type=1 insize=4293 outsize=0 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=0
+Cmd: preprocess
+  insize=15380 outsize=1375 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5045 outsize=3167 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5045 outsize=2452 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=2085 outsize=1477 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=2085 outsize=689 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5008 outsize=3443 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (420): 'surf': output parameter 'o' not completely initialized
+  error: 1 plat 4 at UnityCGGoLin.cginc(153): implicit truncation of vector type
+  api=4 type=1 insize=5008 outsize=0 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=0
+Cmd: preprocess
+  insize=2218 outsize=520 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=2000 outsize=3435 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=2000 outsize=2623 kw= ok=1
+Cmd: preprocess
+  insize=12165 outsize=5071 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3630 outsize=4353 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3630 outsize=1160 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1049 outsize=2249 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1049 outsize=868 kw=SHADOWS_DEPTH ok=1
+Cmd: preprocess
+  insize=4260 outsize=643 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3920 outsize=5792 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3920 outsize=3127 kw= ok=1
+Cmd: preprocess
+  insize=23635 outsize=4804 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6349 outsize=4662 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6349 outsize=4752 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3874 outsize=3549 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3874 outsize=2793 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5909 outsize=3443 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5909 outsize=2761 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: preprocess
+  insize=8485 outsize=2025 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3646 outsize=3736 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3646 outsize=949 kw= ok=1
+Cmd: preprocess
+  insize=27346 outsize=2248 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6413 outsize=6799 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6413 outsize=3175 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4141 outsize=6377 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4141 outsize=3460 kw=POINT ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3992 outsize=5507 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3992 outsize=1550 kw= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6181 outsize=5548 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6181 outsize=1981 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3116 outsize=3744 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3116 outsize=437 kw=SHADOWS_DEPTH ok=1
