@@ -22,9 +22,9 @@ public class MakeWorld : MonoBehaviour {
 
     public Transform person,waterplane,city;
 
-    AnimationCurve heightCurve = AnimationCurve.Linear(0.0f, 1.0f, 1.0f, 1.0f);
+    public AnimationCurve heightCurve = AnimationCurve.Linear(0.0f, 1.0f, 1.0f, 1.0f);
 
- 	AnimationCurve angleCurve = AnimationCurve.Linear(0.0f, 0.0f, 1.0f, 1.0f);
+ 	public AnimationCurve angleCurve = AnimationCurve.Linear(0.0f, 0.0f, 1.0f, 1.0f);
 
 	void generateWater(){
 		Transform w;

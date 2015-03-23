@@ -13,7 +13,8 @@ public class TerrainFoliage : MonoBehaviour {
 
     public static void GenerateFoliage()
     {
-        GenerateTrees();
+        Vector3 v=new Vector3(200.0f,0.0f,200.0f);
+        GenerateTrees2(v,30f,30);
     }
 
     private static void GenerateTrees()
@@ -29,7 +30,7 @@ public class TerrainFoliage : MonoBehaviour {
         td.treeInstances = new TreeInstance[0];
 
         List<Vector3> treePos = new List<Vector3>();
-
+        print(td.alphamapWidth+","+td.alphamapHeight);
         float[,] noisemap = new float[td.alphamapWidth, td.alphamapHeight];
         Generator noise_tree = new Max(
             new PinkNoise((int)UnityEngine.Random.Range(0, int.MaxValue)) { Frequency = 0.01f, OctaveCount = 6, Persistence = 0.66f, Lacunarity = 0.1f },
@@ -78,7 +79,51 @@ public class TerrainFoliage : MonoBehaviour {
         }
         td.treeInstances = treeInstances;
     }
+    public static void GenerateTrees2(Vector3 center,float radius,int treeNum){
+        Terrain t = Terrain.activeTerrain;
+        TerrainData td = t.terrainData;
 
+        TreePrototype[] treeprototypes = new TreePrototype[] { new TreePrototype() { prefab = (GameObject)Resources.Load("BigTree") }, new TreePrototype() { prefab = (GameObject)Resources.Load("Tree") } };
+
+        td.treePrototypes = treeprototypes;
+        List<Vector3> treePos = new List<Vector3>();
+
+        /*float x = 0.0f;
+        while (x < td.alphamapWidth)
+        {
+            float y = 0.0f;
+            while (y < td.alphamapHeight)
+            {*/
+        int i=0;
+        while(i<treeNum){
+            Vector2 point=Random.insideUnitCircle*radius;
+            float x=point.x+center.x;
+            float y=point.y+center.z;
+            float height = td.GetHeight((int)x, (int)y);
+            float heightScaled = height / td.size.y;
+            float xScaled = (x + Random.Range(-1f, 1f)) / td.alphamapWidth;
+            float yScaled = (y + Random.Range(-1f, 1f)) / td.alphamapHeight;
+            float steepness = td.GetSteepness(xScaled, yScaled);
+            treePos.Add(new Vector3(xScaled, heightScaled, yScaled));
+            i++;
+        }
+                /*y++;
+            }
+            x++;
+        }*/
+        TreeInstance[] treeInstances = new TreeInstance[treePos.Count];
+
+        for (int ii = 0; ii < treeInstances.Length; ii++)
+        {
+            treeInstances[ii].position = treePos[ii];
+            treeInstances[ii].prototypeIndex = Random.Range(0, treeprototypes.Length);
+            treeInstances[ii].color = Color.white;
+            treeInstances[ii].lightmapColor = Color.white;
+            treeInstances[ii].heightScale = 1.0f + Random.Range(-0.25f, 0.5f);
+            treeInstances[ii].widthScale = 1.0f + Random.Range(-0.5f, 0.25f);
+        }
+        td.treeInstances = treeInstances;
+    }
     public static void ClearTrees()
     {
         Terrain t = Terrain.activeTerrain;
