@@ -1,24 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
+//using System;
 using System.Collections.Generic;
 
 public class MakeWorld : MonoBehaviour {
 	//Terrain
     public float MountainFreq = 25.0f;
-    public float BumpbMultiplier = 1f;
+    public float BumpMultiplier = 1f;
     public float HeightMultiplier = 1f;
     public float Roughness = 2.5f;
     public float BumpRoughness = 0f;
     public string seed = null;
     public bool randomSeed = true;
     public bool useWater = false;
+    public bool ClipEdges=false;
     public float WaterLevel = 0.1f;
     public Vector3 dimensions=new Vector3(1024,256,1024);
 
     public Texture2D[] textures;
+    public Texture2D grass,grass2;
 
-    public Transform person,waterplane;
+    public Transform person,waterplane,city;
 
     AnimationCurve heightCurve = AnimationCurve.Linear(0.0f, 1.0f, 1.0f, 1.0f);
 
@@ -44,12 +46,13 @@ public class MakeWorld : MonoBehaviour {
  		Terrain.CreateTerrainGameObject(tData);
         TG.SetMountainFreq = MountainFreq;
         TG.SetWaterlevel = WaterLevel;
-        TG.BumpMultiplier = BumpbMultiplier;
-        TG.BumbRoughness = BumpRoughness;
+        TG.BumpMultiplier = BumpMultiplier;
+        TG.BumpRoughness = BumpRoughness;
         TG.HeightMultiplier = HeightMultiplier;
         TG.Roughness = Roughness;
         TG.terrain = Terrain.activeTerrain;
         TG.waterplane = GameObject.Find("Water");  
+        TG.ClipEdges=ClipEdges;
         TerrainFoliage.waterLevel = WaterLevel; 
        	TG.editor = true;
        	if (randomSeed){
@@ -60,9 +63,16 @@ public class MakeWorld : MonoBehaviour {
         TG.makeHeightmap();
         generateTextures();
         generatePerson(TG);
-        generateSun();
+        generateSun2();
+        findCity(TG);
+        TerrainFoliage.grass=grass;
+        TerrainFoliage.grass2=grass2;
         TerrainFoliage.GenerateGrass();
+        TerrainFoliage.GenerateFoliage();
 	} 
+	void generateSun2(){
+		GetComponent<SkyColorCycle>().StartSunAndMoon(new Vector3(dimensions.x/2,0f,dimensions.z/2),dimensions.x/2);
+	}
 	void generateSun(){
 		GameObject sun=new GameObject();
 		sun.name="Sun";
@@ -76,6 +86,23 @@ public class MakeWorld : MonoBehaviour {
 		Vector3 point=new Vector3(dimensions.x/2,0f,dimensions.z/2);
 		point.y=TG.terrain.SampleHeight(point)+2.1f;
 		Instantiate(person,point,Quaternion.identity);
+	}
+	void findCity(TerrainGeneration TG){
+		Vector2 point=Random.insideUnitCircle*(dimensions.x*0.15f);
+		Vector3 start=new Vector3(point.x,0.0f,point.y);
+		start+=dimensions*0.15f;
+		start.y=TG.terrain.SampleHeight(start);
+		/*for(int i=0;i<5;i++){
+			placeBuilding(TG,start,50.0f);
+		}*/
+		Transform t=Instantiate(city,start,Quaternion.identity) as Transform;
+		t.localScale=new Vector3(25.0f,0.0f,25.0f);
+	}
+	void placeBuilding(TerrainGeneration TG, Vector3 cityCentre, float cityRadius){
+		Vector3 point=Random.insideUnitSphere*cityRadius;
+		point+=cityCentre;
+		point.y=TG.terrain.SampleHeight(point);
+		//Instantiate(city,point,Quaternion.identity);
 	}
 	void generateTextures(){
 		List<TTexture> Textures = new List<TTexture>();

@@ -12,8 +12,9 @@ public class TerrainGeneration
     public float BumpMultiplier = 1f;
     public float HeightMultiplier = 1f;
     public float Roughness = 1f;
-    public float BumbRoughness = 1f;
+    public float BumpRoughness = 1f;
     public bool editor = false;
+    public bool ClipEdges=false;
 
     public Terrain terrain;
 
@@ -43,7 +44,8 @@ public class TerrainGeneration
             HeightMultiplier = this.HeightMultiplier,
             Roughness = this.Roughness,
             BumpMultiplier = this.BumpMultiplier,
-            BumpRoughness = this.BumbRoughness,
+            BumpRoughness = this.BumpRoughness,
+            ClipEdges=this.ClipEdges,
         };
         terrainbuilder.Start();
 

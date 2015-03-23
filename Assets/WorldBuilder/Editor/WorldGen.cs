@@ -66,7 +66,7 @@ public class Generation
             TG.SetMountainFreq = MountainFreq;
             TG.SetWaterlevel = WaterLevel;
             TG.BumpMultiplier = BumpbMultiplier;
-            TG.BumbRoughness = BumpRoughness;
+            TG.BumpRoughness = BumpRoughness;
             TG.HeightMultiplier = HeightMultiplier;
             TG.Roughness = Roughness;
             TG.terrain = Terrain.activeTerrain;

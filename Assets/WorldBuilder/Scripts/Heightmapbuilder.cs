@@ -10,6 +10,7 @@ public class Heightmapbuilder : ThreadedJob
 {
     public float[,] Heightmap;
     public bool IsMoisturemap = false;
+    public bool ClipEdges=false;
 
     public int TerrainSeed = 0;
     public Vector3 TerrainSize = Vector3.one;
@@ -46,7 +47,7 @@ public class Heightmapbuilder : ThreadedJob
         if (scaleY > 10f) scaleY *= (1f - scaleY*0.005f);
         Vector3 pos;
         List<float> values = new List<float>();
-        float heighestValue = 0f;
+        float heighestValue = 0f,lowestValue=Mathf.Infinity;
         for (int h = 0; h < Heightmap.GetLength(1); h++)
         {
             for (int w = 0; w < Heightmap.GetLength(0); w++)
@@ -55,25 +56,28 @@ public class Heightmapbuilder : ThreadedJob
                 float bump = noise_bump.GetValue(pos);
                 float continents = noise_islands.GetValue(pos);
                 float mountain = noise_mountain.GetValue(pos);
-                if (mountain >= 0.33f) { mountain -= 0.33f;  mountain *= noise_ridge.GetValue(pos); }
+                if (false){}//mountain >= 0.33f) { mountain -= 0.33f;  mountain *= noise_ridge.GetValue(pos); }
                 else mountain = 0f;
                 float smallbumps = noise_smallbumps.GetValue(pos);
                 float smallbumps2 = noise_smallbumps2.GetValue(pos);
                 
                 float value = 0.05f + bump * bump * HeightMultiplier * 0.3f + (continents - 0.5f) * 0.1f + 0.75f * mountain + 0.009f * BumpMultiplier * smallbumps + 0.005f * smallbumps2;
-                value = clipEdges(value, pos, h, w);
+                if(ClipEdges)
+                    value = clipEdges(value, pos, h, w);
                 Heightmap[h, w] = value;
                 values.Add(value);
                 if (value > heighestValue) heighestValue = value;
+                if (value < lowestValue) lowestValue = value;
+
             }
         }
-        if (heighestValue >= 1f)
+        if (true)
         {
             for (int h = 0; h < Heightmap.GetLength(1); h++)
             {
                 for (int w = 0; w < Heightmap.GetLength(0); w++)
                 {
-                    Heightmap[h, w] *= 1f / heighestValue;
+                    Heightmap[h, w] -= lowestValue;
                 }
             }
         }

@@ -9,6 +9,7 @@ public class TerrainFoliage : MonoBehaviour {
     public static float waterLevel { get; set; }
     public static float maxSteepness { get; set; }
     public static int grassDensity { get; set; }
+    public static Texture2D grass,grass2;
 
     public static void GenerateFoliage()
     {
@@ -100,27 +101,24 @@ public class TerrainFoliage : MonoBehaviour {
 
         DetailPrototype[] detailPrototypes = new DetailPrototype[2];
 
-        detailPrototypes[0] = new DetailPrototype() { prototypeTexture = Resources.Load("Grass") as Texture2D };
-        detailPrototypes[1] = new DetailPrototype() { prototypeTexture = Resources.Load("Grass2") as Texture2D };
+        detailPrototypes[0] = new DetailPrototype() { prototypeTexture = grass };
+        detailPrototypes[1] = new DetailPrototype() { prototypeTexture = grass2 };
 
         td.detailPrototypes = detailPrototypes;
-
         for (int i = 0; i < td.detailPrototypes.Length; i++)
         {
-            int[,] detailLayer = td.GetDetailLayer(0, 0, td.detailWidth, td.detailHeight, i);
-
-            float x = 0.0f;
+            int[,] detailLayer=td.GetDetailLayer(0, 0, td.detailWidth, td.detailHeight, i);
+            int x = 0;
             while (x < td.detailWidth)
             {
-                float y = 0.0f;
+                int y = 0;
                 while (y < td.detailHeight)
                 {
-                    detailLayer[(int)x, (int)y] = 10;
+                    detailLayer[x, y] = 10;
                     y++;
                 }
                 x++;
             }
-            print(detailLayer);
             td.SetDetailLayer(0, 0, i, detailLayer);
         }   
     }
