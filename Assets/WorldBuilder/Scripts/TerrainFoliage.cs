@@ -10,12 +10,13 @@ public class TerrainFoliage : MonoBehaviour {
     public static float maxSteepness { get; set; }
     public static int grassDensity { get; set; }
     public static Texture2D grass,grass2;
+    public static GameObject BigTree,Tree;
 
     public static void GenerateFoliage(float size)
     {
         for(int i=0;i<50;i++){
-            Vector3 v=new Vector3(Random.value*size,0.0f,Random.value*size)+new Vector3(size/2,0f,size/2);
-            GenerateTrees2(v,Random.value*30f,(int)(Random.value*40));
+            Vector3 v=new Vector3(Random.value*size,0.0f,Random.value*size);//+new Vector3(size/2,0f,size/2);
+            GenerateTrees2(v,Random.value*30f,(int)(Random.value*10));
         }
         GenerateTrees2(Vector3.zero,1f,1);
     }
@@ -25,7 +26,7 @@ public class TerrainFoliage : MonoBehaviour {
         Terrain t = Terrain.activeTerrain;
         TerrainData td = t.terrainData;
 
-        TreePrototype[] treeprototypes = new TreePrototype[] { new TreePrototype() { prefab = (GameObject)Resources.Load("BigTree") }, new TreePrototype() { prefab = (GameObject)Resources.Load("Tree") } };
+        TreePrototype[] treeprototypes = new TreePrototype[] { new TreePrototype() { prefab = BigTree }, new TreePrototype() { prefab = Tree } };
 
         td.treePrototypes = treeprototypes;
 

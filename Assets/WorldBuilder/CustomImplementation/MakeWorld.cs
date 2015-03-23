@@ -20,6 +20,8 @@ public class MakeWorld : MonoBehaviour {
     public Texture2D[] textures;
     public Texture2D grass;
 
+    public GameObject BigTree,Tree;
+
     public Transform person,waterplane,city;
 
     public AnimationCurve heightCurve = AnimationCurve.Linear(0.0f, 1.0f, 1.0f, 1.0f);
@@ -67,6 +69,8 @@ public class MakeWorld : MonoBehaviour {
         findCity(TG);
         TerrainFoliage.grass=grass;
         TerrainFoliage.grass2=grass;
+        TerrainFoliage.BigTree=BigTree;
+        TerrainFoliage.Tree=Tree;
         TerrainFoliage.GenerateFoliage(dimensions.x);
         TerrainFoliage.GenerateGrass();
 	} 

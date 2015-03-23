@@ -55,6 +55,8 @@ MonoBehaviour:
   - {fileID: 2800000, guid: c6e0767b1f8c34890ac245217f4b9731, type: 3}
   - {fileID: 2800000, guid: 440eb36db91ca410f800ff3cfe43572f, type: 3}
   grass: {fileID: 2800000, guid: 2c528fec5d95e4ac28cf46399b887662, type: 3}
+  BigTree: {fileID: 100000, guid: 8f31d73f138d56b47a5604d617ca31bc, type: 2}
+  Tree: {fileID: 100000, guid: e407c0fa2f11f814a889d22b6456738d, type: 2}
   person: {fileID: 400002, guid: 8a1f5af96f9535d4ead2c0396c49f17a, type: 2}
   waterplane: {fileID: 0}
   city: {fileID: 400000, guid: 1b0d43bc0f21d4f788ca0518e97b11cc, type: 2}
