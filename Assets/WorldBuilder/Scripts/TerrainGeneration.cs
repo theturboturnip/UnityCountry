@@ -48,14 +48,7 @@ public class TerrainGeneration
             ClipEdges=this.ClipEdges,
         };
         terrainbuilder.Start();
-
-        //For editor calls
-        if (editor)
-        {
-            while (!terrainbuilder.Update()) ;
-            terrain.terrainData.SetHeights(0, 0, terrainbuilder.Heightmap);
-            editor = false;
-        }
+        tdata.SetHeights(0,0,terrainbuilder.Heightmap);
     }
 
     //You can use this to get Random position on terrain

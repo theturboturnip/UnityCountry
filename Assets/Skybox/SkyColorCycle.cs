@@ -23,7 +23,7 @@ public class SkyColorCycle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		seconds+=Time.deltaTime;
-		updateColor();
+		//updateColor();
 		updateLights();
 	}
 	public void StartSunAndMoon(Vector3 centre_, float radius){

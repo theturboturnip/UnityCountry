@@ -262,7 +262,7 @@ public class WorldGen : ScriptableObject{
                 {
                     TerrainFoliage.waterLevel = 0.0f;
                 }
-                TerrainFoliage.GenerateFoliage();
+                TerrainFoliage.GenerateFoliage(0.0f);
             }
 
             if (GUILayout.Button("Remove trees"))

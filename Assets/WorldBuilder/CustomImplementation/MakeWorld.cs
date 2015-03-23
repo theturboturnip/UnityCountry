@@ -18,7 +18,7 @@ public class MakeWorld : MonoBehaviour {
     public Vector3 dimensions=new Vector3(1024,256,1024);
 
     public Texture2D[] textures;
-    public Texture2D grass,grass2;
+    public Texture2D grass;
 
     public Transform person,waterplane,city;
 
@@ -66,9 +66,9 @@ public class MakeWorld : MonoBehaviour {
         generateSun2();
         findCity(TG);
         TerrainFoliage.grass=grass;
-        TerrainFoliage.grass2=grass2;
+        TerrainFoliage.grass2=grass;
+        TerrainFoliage.GenerateFoliage(dimensions.x);
         TerrainFoliage.GenerateGrass();
-        TerrainFoliage.GenerateFoliage();
 	} 
 	void generateSun2(){
 		GetComponent<SkyColorCycle>().StartSunAndMoon(new Vector3(dimensions.x/2,0f,dimensions.z/2),dimensions.x/2);

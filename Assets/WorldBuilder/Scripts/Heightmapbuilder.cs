@@ -37,7 +37,7 @@ public class Heightmapbuilder : ThreadedJob
     
     private int seed { get { return _seed + 1000 * _seedcounter++; } }
 
-    protected override void ThreadFunction()
+    void Start()
     {
         initNoiseGenerators();
         float scaleX = HeightmapScale.x;
@@ -56,7 +56,7 @@ public class Heightmapbuilder : ThreadedJob
                 float bump = noise_bump.GetValue(pos);
                 float continents = noise_islands.GetValue(pos);
                 float mountain = noise_mountain.GetValue(pos);
-                if (false){}//mountain >= 0.33f) { mountain -= 0.33f;  mountain *= noise_ridge.GetValue(pos); }
+                if (false){}//(mountain >= 0.33f) { mountain -= 0.33f;  mountain *= noise_ridge.GetValue(pos); }
                 else mountain = 0f;
                 float smallbumps = noise_smallbumps.GetValue(pos);
                 float smallbumps2 = noise_smallbumps2.GetValue(pos);

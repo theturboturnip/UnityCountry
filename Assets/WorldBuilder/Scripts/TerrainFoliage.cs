@@ -11,10 +11,13 @@ public class TerrainFoliage : MonoBehaviour {
     public static int grassDensity { get; set; }
     public static Texture2D grass,grass2;
 
-    public static void GenerateFoliage()
+    public static void GenerateFoliage(float size)
     {
-        Vector3 v=new Vector3(200.0f,0.0f,200.0f);
-        GenerateTrees2(v,30f,30);
+        for(int i=0;i<50;i++){
+            Vector3 v=new Vector3(Random.value*size,0.0f,Random.value*size)+new Vector3(size/2,0f,size/2);
+            GenerateTrees2(v,Random.value*30f,(int)(Random.value*40));
+        }
+        GenerateTrees2(Vector3.zero,1f,1);
     }
 
     private static void GenerateTrees()
@@ -88,12 +91,6 @@ public class TerrainFoliage : MonoBehaviour {
         td.treePrototypes = treeprototypes;
         List<Vector3> treePos = new List<Vector3>();
 
-        /*float x = 0.0f;
-        while (x < td.alphamapWidth)
-        {
-            float y = 0.0f;
-            while (y < td.alphamapHeight)
-            {*/
         int i=0;
         while(i<treeNum){
             Vector2 point=Random.insideUnitCircle*radius;
@@ -102,25 +99,24 @@ public class TerrainFoliage : MonoBehaviour {
             float height = td.GetHeight((int)x, (int)y);
             float heightScaled = height / td.size.y;
             float xScaled = (x + Random.Range(-1f, 1f)) / td.alphamapWidth;
-            float yScaled = (y + Random.Range(-1f, 1f)) / td.alphamapHeight;
+            float yScaled = (y) / td.alphamapHeight;
             float steepness = td.GetSteepness(xScaled, yScaled);
             treePos.Add(new Vector3(xScaled, heightScaled, yScaled));
             i++;
         }
-                /*y++;
-            }
-            x++;
-        }*/
-        TreeInstance[] treeInstances = new TreeInstance[treePos.Count];
 
-        for (int ii = 0; ii < treeInstances.Length; ii++)
+        TreeInstance[] treeInstances = new TreeInstance[treePos.Count+td.treeInstances.Length];
+        for (i=0;i<td.treeInstances.Length;i++){
+            treeInstances[i]=td.treeInstances[i];
+        }
+        for (i=i+1; i < treeInstances.Length; i++)
         {
-            treeInstances[ii].position = treePos[ii];
-            treeInstances[ii].prototypeIndex = Random.Range(0, treeprototypes.Length);
-            treeInstances[ii].color = Color.white;
-            treeInstances[ii].lightmapColor = Color.white;
-            treeInstances[ii].heightScale = 1.0f + Random.Range(-0.25f, 0.5f);
-            treeInstances[ii].widthScale = 1.0f + Random.Range(-0.5f, 0.25f);
+            treeInstances[i].position = treePos[i-td.treeInstances.Length];
+            treeInstances[i].prototypeIndex = Random.Range(0, treeprototypes.Length);
+            treeInstances[i].color = Color.white;
+            treeInstances[i].lightmapColor = Color.white;
+            treeInstances[i].heightScale = 1.0f;
+            treeInstances[i].widthScale = 1.0f + Random.Range(-0.5f, 0.25f);
         }
         td.treeInstances = treeInstances;
     }
@@ -159,7 +155,7 @@ public class TerrainFoliage : MonoBehaviour {
                 int y = 0;
                 while (y < td.detailHeight)
                 {
-                    detailLayer[x, y] = 10;
+                    detailLayer[x, y] = (int)Random.Range(0.0f,10.0f);
                     y++;
                 }
                 x++;

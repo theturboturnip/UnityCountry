@@ -46,7 +46,7 @@ MonoBehaviour:
   Roughness: 0
   BumpRoughness: 0
   seed: 1
-  randomSeed: 0
+  randomSeed: 1
   useWater: 0
   ClipEdges: 0
   WaterLevel: 3
@@ -55,10 +55,44 @@ MonoBehaviour:
   - {fileID: 2800000, guid: c6e0767b1f8c34890ac245217f4b9731, type: 3}
   - {fileID: 2800000, guid: 440eb36db91ca410f800ff3cfe43572f, type: 3}
   grass: {fileID: 2800000, guid: 2c528fec5d95e4ac28cf46399b887662, type: 3}
-  grass2: {fileID: 2800000, guid: d6cdc79ec19714fcd980ca3f6ac01a0a, type: 3}
   person: {fileID: 400002, guid: 8a1f5af96f9535d4ead2c0396c49f17a, type: 2}
   waterplane: {fileID: 0}
   city: {fileID: 400000, guid: 1b0d43bc0f21d4f788ca0518e97b11cc, type: 2}
+  heightCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: .337500006
+      value: 1.04499996
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  angleCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -70,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c81f8dba8ea624986a75eb3246f0771d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsPerCycle: 60
+  secondsPerCycle: 600
   r:
     serializedVersion: 2
     m_Curve:
@@ -79,13 +113,18 @@ MonoBehaviour:
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - time: .750300109
-      value: .225924462
+    - time: .271135479
+      value: .345217347
       inSlope: .112422585
       outSlope: .112422585
       tangentMode: 0
-    - time: 1.0043124
-      value: 1
+    - time: .503090739
+      value: .992417097
+      inSlope: -1.30644071
+      outSlope: -1.30644071
+      tangentMode: 0
+    - time: .987789512
+      value: -.00206005573
       inSlope: 2
       outSlope: 2
       tangentMode: 0
@@ -104,8 +143,8 @@ MonoBehaviour:
       inSlope: .666081905
       outSlope: .666081905
       tangentMode: 0
-    - time: .682219267
-      value: .502534091
+    - time: .511385918
+      value: .521284103
       inSlope: 1.35332346
       outSlope: 1.35332346
       tangentMode: 0
